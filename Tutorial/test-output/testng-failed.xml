@@ -6,8 +6,8 @@
       <class name="feature.SmokeTest">
         <methods>
           <include name="cleanUp"/>
+          <include name="checkForBrokenLinks"/>
           <include name="setUp"/>
-          <include name="verifyWebsiteIsLive"/>
         </methods>
       </class> <!-- feature.SmokeTest -->
     </classes>

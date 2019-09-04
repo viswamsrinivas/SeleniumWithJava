@@ -11,6 +11,10 @@ public class HomePage extends BaseFunctions{
 	
   @FindBy(css="a>img[src*=logo][title='Tarka Labs']")
   WebElement logo;
+  
+  @FindBy(css=".mobile-hide a[href='/about']")
+  WebElement aboutButton;
+  
 		
   public HomePage(WebDriver driver){
 	  PageFactory.initElements(driver, this);
@@ -21,5 +25,11 @@ public class HomePage extends BaseFunctions{
   {
 	  return logo.isDisplayed();
   }
+  
+  public void clickAboutButton() 
+  {
+	aboutButton.click();  
+  }
+ 
 
 }

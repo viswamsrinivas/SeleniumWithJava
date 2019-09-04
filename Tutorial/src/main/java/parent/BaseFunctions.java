@@ -34,5 +34,13 @@ public class BaseFunctions {
 		driver.manage().timeouts().pageLoadTimeout(18, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
+	
+	public void closeNewTabs() {
+		for(int i = driver.getWindowHandles().size() -1 ; i > 0 ; i--){
+	        String winHandle = driver.getWindowHandles().toArray()[i].toString();
+	        driver.switchTo().window(winHandle);
+	        driver.close();
+	}
+	}
 
 }
